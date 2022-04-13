@@ -1,12 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+
+    <br>
+    <div class="ion-text-center">
+      <img src="../../../assets/icon/logo_devskill.png">
+    </div>
+    <br>
+
+  </ion-toolbar>
+</ion-header>
+
 <ion-content>
   <form>
-    
-    <br><br>
-    <div class="ion-text-center">
-      <img src="../../../assets/icon/logo_devskill@2x.png">
-    </div>
-    <br><br><br>
-  
     <ion-grid>
 
       <ion-row class="ion-text-center">
@@ -25,34 +30,24 @@
           <ion-item class="ion-align-self-start">
             <ion-label for="nome" position="stacked">Nome:</ion-label>
             <ion-input type="text" id="nome" name="nome"></ion-input>
-            <ion-icon slot="end" name="person"></ion-icon>
+            <ion-icon color="secondary" slot="end" name="person"></ion-icon>
           </ion-item>
           <h6 style="font-size: small;">Inserisci Nome</h6>
+
+          <ion-item>
+            <ion-label for="cogn" class="center" position="stacked">Cognome:</ion-label>
+            <ion-input type="text" id="cogn" name="cogn" minlength="8"></ion-input>
+            <ion-icon color="secondary" slot="end" name="person"></ion-icon>
+          </ion-item>
+          <h6 style="font-size: small;">Inserisci Cognome</h6>
           
           <ion-item class="ion-align-self-start">
             <ion-label for="username" position="stacked">Username:</ion-label>
             <ion-input type="text" id="username" name="username"></ion-input>
-            <ion-icon slot="end" name="mail"></ion-icon>
+            <ion-icon color="secondary" slot="end" name="mail"></ion-icon>
           </ion-item>
           <h6 style="font-size: small;">Inserisci Username</h6>
-          
-          <ion-item>
-            <ion-label for="pass" class="center" position="stacked">Password:</ion-label>
-            <ion-input type="password" id="pass" name="pass" minlength="8"></ion-input>
-            <ion-icon slot="end" name="lock-closed"></ion-icon>
-          </ion-item>
-          <h6 style="font-size: small;">Inserisci Password(minimo 8 caratteri)</h6>
-        
-        </ion-col>
-        
-        <ion-col>
-          <ion-item>
-            <ion-label for="cogn" class="center" position="stacked">Cognome:</ion-label>
-            <ion-input type="text" id="cogn" name="cogn" minlength="8"></ion-input>
-            <ion-icon slot="end" name="person"></ion-icon>
-          </ion-item>
-          <h6 style="font-size: small;">Inserisci Cognome</h6>
-          
+
           <ion-item>
             <ion-label for="data" class="center" position="stacked">Data di nascita:</ion-label>
             <ion-input type="date" id="data" name="data"></ion-input>
@@ -60,13 +55,19 @@
           <h6 style="font-size: small;">Inserisci Data di nascita</h6>
           
           <ion-item>
+            <ion-label for="pass" class="center" position="stacked">Password:</ion-label>
+            <ion-input type="password" id="pass" name="pass" minlength="8"></ion-input>
+            <ion-icon color="secondary" slot="end" name="lock-closed"></ion-icon>
+          </ion-item>
+          <h6 style="font-size: small;">Inserisci Password(minimo 8 caratteri)</h6>
+          
+          <ion-item>
             <ion-label for="cpass" class="center" position="stacked">Conferma password:</ion-label>
             <ion-input type="password" id="pass" name="pass" minlength="8"></ion-input>
-            <ion-icon slot="end" name="lock-closed"></ion-icon>
+            <ion-icon color="secondary" slot="end" name="lock-closed"></ion-icon>
           </ion-item>
           <h6 style="font-size: small;">Conferma Password(minimo 8 caratteri)</h6>
 
-          <br><br>
         </ion-col>
 
         <ion-col></ion-col>
@@ -75,7 +76,7 @@
 
       <ion-row>
         <ion-col class="ion-text-center">
-          <ion-button>
+          <ion-button color="secondary">
             Registrati
         </ion-button>
         </ion-col>
@@ -83,5 +84,8 @@
 
     </ion-grid>  
 
+    <ion-toolbar color="primary" class="ion-text-center">
+      <h5><a href="https://devskill.com" style="color: white;">DevSkill School</a> 2022 Fumetteria</h5>
+    </ion-toolbar>
   </form>
 </ion-content>

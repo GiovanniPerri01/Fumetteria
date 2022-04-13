@@ -1,12 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+
+    <br>
+    <div class="ion-text-center">
+      <img src="../../../assets/icon/logo_devskill.png">
+    </div>
+    <br>
+
+  </ion-toolbar>
+</ion-header>
+
 <ion-content>
   <form>
     
-    <br><br>
-    <div class="ion-text-center">
-      <img src="../../../assets/icon/logo_devskill@2x.png">
-    </div>
-    <br><br><br>
-  
     <ion-grid>
 
       <ion-row class="ion-text-center">
@@ -24,17 +30,16 @@
           <ion-item>
             <ion-label for="username" position="floating">Username:</ion-label>
             <ion-input type="text" id="username" name="username"></ion-input>
-            <ion-icon slot="end" name="mail"></ion-icon>
+            <ion-icon color="secondary" slot="end" name="mail"></ion-icon>
           </ion-item>
           <h6 style="font-size: small;">Inserisci Username</h6>
-          <br>
+
           <ion-item>
             <ion-label for="pass" class="center" position="floating">Password:</ion-label>
             <ion-input type="password" id="pass" name="pass"></ion-input>
-            <ion-icon slot="end" name="lock-closed"></ion-icon>
+            <ion-icon color="secondary" slot="end" name="lock-closed"></ion-icon>
           </ion-item>
           <h6 style="font-size: small;">Inserisci Password</h6>
-          <br><br>
 
         </ion-col>
 
@@ -43,22 +48,20 @@
       </ion-row>
 
       <ion-row>
-        <ion-col>
+        <ion-col class="ion-text-center">
+          <ion-button color="secondary">
+            Login
+        </ion-button>
         </ion-col>
-
-        <ion-col>
-          <div class="ion-float-right">
-            <ion-button>
-              Login
-            </ion-button>
-          </div>
-        </ion-col>
-
-        <ion-col></ion-col>
       </ion-row>
 
-
-    </ion-grid>  
+    </ion-grid>
 
   </form>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary" class="ion-text-center">
+    <h5><a href="https://devskill.com" style="color: white;">DevSkill School</a> 2022 Fumetteria</h5>
+  </ion-toolbar>
+</ion-footer>
