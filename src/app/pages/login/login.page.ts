@@ -13,8 +13,16 @@ export class LoginPage implements OnInit {
 
   constructor() { }
 
-  loginClick():void{
-    alert("Username: " + this.username + "    " +"Password: " + this.password);
+  login(){
+    if(this.username == "" || this.password == ""){
+      alert("Username o password vuote");
+    }
+    for(let i = 0; i < this.username.length; i++){
+      if(this.username[i] == "?" || this.username[i] == "!" || this.username[i] == "&"){
+        alert("L'username contiene caratteri non consentiti");
+        break
+      }
+    }
   }
 
   ngOnInit() {

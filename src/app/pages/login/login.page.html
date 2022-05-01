@@ -11,7 +11,7 @@
 </ion-header>
 
 <ion-content>
-  <form>
+  <form (submit)="login()">
     
     <ion-grid>
 
@@ -49,9 +49,9 @@
 
       <ion-row>
         <ion-col class="ion-text-center">
-          <ion-button (click)="loginClick()" color="secondary">
+          <ion-button type="submit" color="secondary">
             Login
-        </ion-button>
+          </ion-button>
         </ion-col>
       </ion-row>
 
