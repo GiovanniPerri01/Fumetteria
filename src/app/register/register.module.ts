@@ -7,6 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { RegisterPageRoutingModule } from './register-routing.module';
 
 import { RegisterPage } from './register.page';
+import { ToolbarInferioreComponent } from '../components/toolbar-inferiore/toolbar-inferiore.component';
+import { ToolbarSuperioreComponent } from '../components/toolbar-superiore/toolbar-superiore.component';
 
 @NgModule({
   imports: [
@@ -15,6 +17,6 @@ import { RegisterPage } from './register.page';
     IonicModule,
     RegisterPageRoutingModule
   ],
-  declarations: [RegisterPage]
+  declarations: [RegisterPage, ToolbarInferioreComponent, ToolbarSuperioreComponent]
 })
 export class RegisterPageModule {}
