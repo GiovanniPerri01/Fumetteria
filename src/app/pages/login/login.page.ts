@@ -17,10 +17,15 @@ export class LoginPage implements OnInit {
     if(this.username == "" || this.password == ""){
       alert("Username o password vuote");
     }
-    for(let i = 0; i < this.username.length; i++){
-      if(this.username[i] == "?" || this.username[i] == "!" || this.username[i] == "&"){
-        alert("L'username contiene caratteri non consentiti");
-        break
+    else if(this.password.length<8){
+      alert("Password troppo corta, deve contenere minimo 8 caratteri");
+    }
+    else{
+      for(let i = 0; i < this.username.length; i++){
+        if(this.username[i] == "?" || this.username[i] == "!" || this.username[i] == "&"){
+          alert("L'username contiene caratteri non consentiti");
+          break
+        }
       }
     }
   }
