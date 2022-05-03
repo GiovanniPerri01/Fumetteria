@@ -12,6 +12,7 @@ import { ToolbarInferioreComponent } from './toolbar-inferiore.component';
     CommonModule,
     IonicModule,
     FormsModule
-  ]
+  ],
+  exports: [ToolbarInferioreComponent]
 })
 export class ToolbarInferioreModule { }
