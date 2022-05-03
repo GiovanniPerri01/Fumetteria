@@ -1,13 +1,5 @@
 <ion-header>
-  <ion-toolbar>
-
-    <br>
-    <div class="ion-text-center">
-      <img src="../../../assets/icon/logo_devskill.png">
-    </div>
-    <br>
-
-  </ion-toolbar>
+  <app-toolbar-superiore></app-toolbar-superiore>
 </ion-header>
 
 <ion-content>
@@ -48,20 +40,31 @@
       </ion-row>
 
       <ion-row>
-        <ion-col class="ion-text-center">
+        <ion-col></ion-col>
+        
+        <ion-col class="ion-text-right">
           <ion-button type="submit" color="secondary">
             Login
           </ion-button>
         </ion-col>
+
+        <ion-col></ion-col>
       </ion-row>
 
+      <ion-row>
+        <ion-col class="ion-text-center">
+
+          <h5>Non hai un account?</h5><a routerLink="/register" style="color: white;">Registrati qui</a>
+
+          <!--<ion-button color="secondary" routerLink="/register">
+            Registrati
+          </ion-button>!-->
+
+        </ion-col>
+      </ion-row>
     </ion-grid>
 
   </form>
 </ion-content>
 
-<ion-footer>
-  <ion-toolbar color="primary" class="ion-text-center">
-    <h5><a href="https://devskill.com" style="color: white;">DevSkill School</a> 2022 Fumetteria</h5>
-  </ion-toolbar>
-</ion-footer>
+<app-toolbar-inferiore></app-toolbar-inferiore>

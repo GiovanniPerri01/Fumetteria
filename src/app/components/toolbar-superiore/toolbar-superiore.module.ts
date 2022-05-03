@@ -7,7 +7,7 @@ import { ToolbarSuperioreComponent } from './toolbar-superiore.component';
 
 
 @NgModule({
-  declarations: [ToolbarSuperioreComponent],
+  declarations: [],
   imports: [
     CommonModule,
     IonicModule,

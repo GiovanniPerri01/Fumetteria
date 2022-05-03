@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { RegisterPageRoutingModule } from './register-routing.module';
+import { HomePageRoutingModule } from './home-routing.module';
 
-import { RegisterPage } from './register.page';
+import { HomePage } from './home.page';
 import { ToolbarInferioreComponent } from 'src/app/components/toolbar-inferiore/toolbar-inferiore.component';
 import { ToolbarSuperioreComponent } from 'src/app/components/toolbar-superiore/toolbar-superiore.component';
 
@@ -15,8 +15,8 @@ import { ToolbarSuperioreComponent } from 'src/app/components/toolbar-superiore/
     CommonModule,
     FormsModule,
     IonicModule,
-    RegisterPageRoutingModule
+    HomePageRoutingModule
   ],
-  declarations: [RegisterPage, ToolbarSuperioreComponent, ToolbarInferioreComponent] 
+  declarations: [HomePage, ToolbarInferioreComponent, ToolbarSuperioreComponent]
 })
-export class RegisterPageModule {}
+export class HomePageModule {}

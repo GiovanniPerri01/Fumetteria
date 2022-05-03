@@ -1,13 +1,5 @@
 <ion-header>
-  <ion-toolbar>
-
-    <br>
-    <div class="ion-text-center">
-      <img src="../../../assets/icon/logo_devskill.png">
-    </div>
-    <br>
-
-  </ion-toolbar>
+  <app-toolbar-superiore></app-toolbar-superiore>
 </ion-header>
 
 <ion-content>
@@ -50,7 +42,7 @@
 
           <ion-item>
             <ion-label for="data" class="center" position="stacked">Data di nascita:</ion-label>
-            <ion-input type="date" id="data" name="data"></ion-input>
+            <ion-input type="date" id="data" name="mail"></ion-input>
           </ion-item>
           <h6 style="font-size: small;">Inserisci Data di nascita</h6>
           
@@ -84,8 +76,6 @@
 
     </ion-grid>  
 
-    <ion-toolbar color="primary" class="ion-text-center">
-      <h5><a href="https://devskill.com" style="color: white;">DevSkill School</a> 2022 Fumetteria</h5>
-    </ion-toolbar>
+    <app-toolbar-inferiore></app-toolbar-inferiore>
   </form>
 </ion-content>
