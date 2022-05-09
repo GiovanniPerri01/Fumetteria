@@ -16,16 +16,13 @@ export class LoginPage implements OnInit {
 
     this.mioForm = fb.group({
       username: ['', Validators.compose([Validators.required, Validators.email])],
-      password: ['', Validators.required]
+      password: ['', Validators.compose([Validators.required, Validators.minLength(8)])]
     })
 
   }
 
   login(){
     let username:string = this.mioForm.get("username").value;
-    if(this.mioForm.get("password").value.length<8){
-      alert("Password troppo corta, deve contenere minimo 8 caratteri");
-    }
     for(let i:number = 0; i < this.charSpeciali.length; i++){
       if(username.includes(this.charSpeciali[i])){
         alert("L'username contiene caratteri non consentiti");
