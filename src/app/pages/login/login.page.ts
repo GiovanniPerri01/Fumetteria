@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, RequiredValidator, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -8,24 +9,27 @@ import { Component, Input, OnInit } from '@angular/core';
 
 export class LoginPage implements OnInit {
 
-  username:string;
-  password:string;
+  mioForm;
+  charSpeciali:string = "?!^&()#$%*";
 
-  constructor() { }
+  constructor(private fb:FormBuilder) { 
+
+    this.mioForm = fb.group({
+      username: ['', Validators.compose([Validators.required, Validators.email])],
+      password: ['', Validators.required]
+    })
+
+  }
 
   login(){
-    if(this.username == "" || this.password == ""){
-      alert("Username o password vuote");
-    }
-    else if(this.password.length<8){
+    let username:string = this.mioForm.get("username").value;
+    if(this.mioForm.get("password").value.length<8){
       alert("Password troppo corta, deve contenere minimo 8 caratteri");
     }
-    else{
-      for(let i = 0; i < this.username.length; i++){
-        if(this.username[i] == "?" || this.username[i] == "!" || this.username[i] == "&"){
-          alert("L'username contiene caratteri non consentiti");
-          break
-        }
+    for(let i:number = 0; i < this.charSpeciali.length; i++){
+      if(username.includes(this.charSpeciali[i])){
+        alert("L'username contiene caratteri non consentiti");
+        break
       }
     }
   }

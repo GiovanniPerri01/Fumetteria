@@ -3,9 +3,9 @@
 </ion-header>
 
 <ion-content>
-  <form (submit)="login()">
+  <form [formGroup]="mioForm" (ngSubmit)="login()">
     
-    <ion-grid>
+    <ion-grid >
 
       <ion-row class="ion-text-center">
         <ion-col>
@@ -21,14 +21,14 @@
         <ion-col>
           <ion-item>
             <ion-label for="username" position="floating">Username:</ion-label>
-            <ion-input type="text" [(ngModel)]="username" id="username" name="username"></ion-input>
+            <ion-input type="text" id="username" name="username" formControlName="username"></ion-input>
             <ion-icon color="secondary" slot="end" name="mail"></ion-icon>
           </ion-item>
           <h6 style="font-size: small;">Inserisci Username</h6>
 
           <ion-item>
             <ion-label for="pass" class="center" position="floating">Password:</ion-label>
-            <ion-input type="password" [(ngModel)]="password" id="pass" name="pass"></ion-input>
+            <ion-input type="password" id="pass" name="pass" formControlName="password"></ion-input>
             <ion-icon color="secondary" slot="end" name="lock-closed"></ion-icon>
           </ion-item>
           <h6 style="font-size: small;">Inserisci Password</h6>
@@ -43,7 +43,7 @@
         <ion-col></ion-col>
         
         <ion-col class="ion-text-right">
-          <ion-button type="submit" color="secondary">
+          <ion-button type="submit" color="secondary" [disabled]="!mioForm.valid">
             Login
           </ion-button>
         </ion-col>
@@ -57,6 +57,7 @@
           <h5>Non hai un account?</h5><a routerLink="/register" style="color: white;">Registrati qui</a>
 
           <!--<app-button indirizzo="/register" testo="Registrati qui"></app-button>!-->
+        
 
         </ion-col>
       </ion-row>
