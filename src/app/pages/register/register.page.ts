@@ -1,5 +1,7 @@
+import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { IonDatetime } from '@ionic/angular';
 
 @Component({
   selector: 'app-register',
@@ -25,7 +27,9 @@ export class RegisterPage implements OnInit {
   }
 
   register(){
+
     let username:string = this.mioForm.get("username").value;
+    
     for(let i:number = 0; i < this.charSpeciali.length; i++){
       if(username.includes(this.charSpeciali[i])){
         alert("L'username contiene caratteri non consentiti");
@@ -35,6 +39,7 @@ export class RegisterPage implements OnInit {
     if(this.mioForm.get("password").value != this.mioForm.get("confPassword").value){
       alert("Le password non corrispondono");
     }
+
   }
 
   ngOnInit() {
