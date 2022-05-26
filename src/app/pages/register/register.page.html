@@ -1,6 +1,8 @@
-<app-toolbar-superiore></app-toolbar-superiore>
-
 <ion-content>
+  <br><br>
+  <div class="center">
+    <img src="../../../assets/icon/logo_devskill@2x.png" width="8%">
+  </div>
 
   <ion-grid>
     <ion-row class="ion-text-center">
@@ -20,34 +22,28 @@
           
           <ion-item class="ion-align-self-start">
             <ion-label for="nome" position="stacked">Nome:</ion-label>
-            <ion-input color="primary" type="text" id="nome" name="nome" formControlName="nome"></ion-input>
+            <ion-input color="primary" type="text" id="nome" name="nome" formControlName="nome" [ngModel]="nome"></ion-input>
             <ion-icon color="secondary" slot="end" name="person"></ion-icon>
           </ion-item>
           <h6 style="font-size: small;">Inserisci Nome</h6>
 
           <ion-item>
             <ion-label for="cogn" position="stacked">Cognome:</ion-label>
-            <ion-input color="primary" type="text" id="cogn" name="cogn" formControlName="cognome"></ion-input>
+            <ion-input color="primary" type="text" id="cognome" name="cognome" formControlName="cognome" [ngModel]="cognome"></ion-input>
             <ion-icon color="secondary" slot="end" name="person"></ion-icon>
           </ion-item>
           <h6 style="font-size: small;">Inserisci Cognome</h6>
           
           <ion-item class="ion-align-self-start">
             <ion-label for="username" position="stacked">Username:</ion-label>
-            <ion-input color="primary" type="text" id="username" name="username" formControlName="username"></ion-input>
+            <ion-input color="primary" type="text" id="username" name="username" formControlName="username" [ngModel]="username"></ion-input>
             <ion-icon color="secondary" slot="end" name="mail"></ion-icon>
           </ion-item>
           <h6 style="font-size: small;">Inserisci Username</h6>
-
-          <ion-item>
-            <ion-label for="data" position="stacked">Data di nascita:</ion-label>
-            <ion-input color="primary" type="date" id="data" name="data" formControlName="dataNascita"></ion-input>
-          </ion-item>
-          <h6 style="font-size: small;">Inserisci Data di nascita</h6>
           
           <ion-item>
             <ion-label for="pass" position="stacked">Password:</ion-label>
-            <ion-input color="primary" type="password" id="pass" name="pass" formControlName="password"></ion-input>
+            <ion-input color="primary" type="password" id="pass" name="pass" formControlName="password" [ngModel]="password"></ion-input>
             <ion-icon color="secondary" slot="end" name="lock-closed"></ion-icon>
           </ion-item>
           <h6 style="font-size: small;">Inserisci Password(minimo 8 caratteri)</h6>
@@ -74,7 +70,7 @@
       </ion-row>
       <ion-row>
         <ion-col class="ion-text-center">
-          <h5>Sei giá registrato?</h5><a routerLink="/login" style="color: white;">Vai a login</a>
+          <h5>Sei giá registrato?</h5><a routerLink="/login">Vai a login</a>
         </ion-col>
       </ion-row>
 

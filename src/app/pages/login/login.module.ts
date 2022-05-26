@@ -10,6 +10,9 @@ import { LoginPage } from './login.page';
 import { ToolbarSuperioreComponent } from 'src/app/components/toolbar-superiore/toolbar-superiore.component';
 import { ToolbarInferioreComponent } from 'src/app/components/toolbar-inferiore/toolbar-inferiore.component';
 import { ButtonComponent } from 'src/app/components/button/button.component';
+import { ButtonModule } from 'src/app/components/button/button.module';
+import { ToolbarInferioreModule } from 'src/app/components/toolbar-inferiore/toolbar-inferiore.module';
+import { ToolbarSuperioreModule } from 'src/app/components/toolbar-superiore/toolbar-superiore.module';
 
 @NgModule({
   imports: [
@@ -18,7 +21,10 @@ import { ButtonComponent } from 'src/app/components/button/button.component';
     IonicModule,
     LoginPageRoutingModule,
     ReactiveFormsModule,
+    ButtonModule,
+    ToolbarInferioreModule,
+    ToolbarSuperioreModule
   ],
-  declarations: [LoginPage, ToolbarSuperioreComponent, ToolbarInferioreComponent, ButtonComponent]
+  declarations: [LoginPage]
 })
 export class LoginPageModule {}

@@ -1,5 +1,30 @@
-<ion-toolbar class="ion-padding">
-  <div class="center">
-    <img src="../../../assets/icon/logo_devskill.png" [routerLink]="['/home']">
-  </div>
-</ion-toolbar>
+<div>
+  <ion-header>
+    <ion-toolbar class="ion-padding">
+      <div class="center">
+        <img
+          src="../../../assets/icon/logo_devskill.png"
+          [routerLink]="['/home']"
+        />
+      </div>
+      <ion-buttons slot="start">
+        <ion-menu-button color="primary"></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-menu contentId="main-content" type="overlay">
+
+    <div
+      class="ion-text-center"
+      color="primary"
+      style="background-color: #082444"
+    >
+      <br />
+      <img src="../assets/icon/logo_devskill@2x.png" width="30%" />
+    </div>
+    <ion-content color="secondary">
+    
+    </ion-content>
+  </ion-menu>
+</div>

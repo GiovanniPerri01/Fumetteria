@@ -3,15 +3,18 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { ToolbarSuperioreComponent } from './toolbar-superiore.component';
+import { RouterModule } from '@angular/router';
+import { menuController } from "@ionic/core";
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [ToolbarSuperioreComponent],
   imports: [
     CommonModule,
     IonicModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   exports: [ToolbarSuperioreComponent]
 })
